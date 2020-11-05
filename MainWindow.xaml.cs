@@ -23,6 +23,7 @@ namespace Rusu_Bianca_Lab2
         public MainWindow()
         {
             InitializeComponent();
+        }
 
 
             private DoughnutMachine myDoughnutMachine;
