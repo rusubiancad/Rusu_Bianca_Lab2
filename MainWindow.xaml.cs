@@ -39,18 +39,6 @@ namespace Rusu_Bianca_Lab2
         private int mFilledChocolate;
         private int mFilledVanilla;
 
-        private void glazedToolStripMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            glazedToolStripMenuItem.IsChecked = true;
-            sugarToolStripMenuItem.IsChecked = false;
-            myDoughnutMachine.MakeDoughnuts(DoughnutType.Glazed);
-        }
-        private void sugarToolStripMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            glazedToolStripMenuItem.IsChecked = false;
-            sugarToolStripMenuItem.IsChecked = true;
-            myDoughnutMachine.MakeDoughnuts(DoughnutType.Sugar);
-        }
 
         private void DoughnutCompleteHandler()
         {
@@ -84,8 +72,22 @@ namespace Rusu_Bianca_Lab2
             if (!(e.Key >= Key.D0 && e.Key <= Key.D9))
             {
                 MessageBox.Show("Numai cifre se pot introduce!", "Input Error", MessageBoxButton.OK,
-               MessageBoxImage.Error);
+                MessageBoxImage.Error);
             }
+        }
+
+        private void glazedToopStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            glazedToolStripMenuItem.IsChecked = true;
+            sugarToolStripMenuItem.IsChecked = false;
+            myDoughnutMachine.MakeDoughnuts(DoughnutType.Glazed);
+        }
+
+        private void sugarToopStripMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            glazedToolStripMenuItem.IsChecked = false;
+            sugarToolStripMenuItem.IsChecked = true;
+            myDoughnutMachine.MakeDoughnuts(DoughnutType.Sugar);
         }
     }
 }
